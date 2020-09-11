@@ -1,5 +1,5 @@
 OPENSHIFT_DIR := $(BUILD_HARNESS_EXTENSIONS_PATH)/vendor/openshift
-OPENSHIFT := $(OPERATORSDK_DIR)/oc
+OPENSHIFT := $(OPENSHIFT_DIR)/oc
 
 OPENSHIFT_URL := https://github.com/openshift/origin/releases/download/v1.5.1/openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz
 
