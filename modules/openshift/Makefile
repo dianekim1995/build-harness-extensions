@@ -6,7 +6,7 @@ OPERATORSDK_URL := https://github.com/openshift/origin/releases/download/v1.5.1/
 
 .PHONY: openshift/install
 ## Installs the Operator SDK
-operatorsdk/install:
+openshift/install:
 	[ -x $(OPENSHIFT) ] || ( \
 		echo "Installing Openshift CLI" && \
 		mkdir -p $(OPENSHIFT_DIR) && \
