@@ -22,4 +22,4 @@ openshift/install:
 .PHONY: openshift/login
 #log in to OCP cluster
 openshift/login:
-	$(OPENSHIFT) login --server=$(OPENSHIFT_SERVER) -u $(OPENSHIFT_USER) -p $(OPENSHIFT_PW)
+	$(OPENSHIFT) login --server=$(OPENSHIFT_SERVER) -u $(OPENSHIFT_USER) -p $(OPENSHIFT_PW) --insecure-skip-tls-verify
