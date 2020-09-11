@@ -10,7 +10,7 @@ openshift/install:
 	[ -x $(OPENSHIFT) ] || ( \
 		echo "Installing Openshift CLI" && \
 		mkdir -p $(OPENSHIFT_DIR) && \
-		cd $(OPENSHIFT_DIR)
+		cd $(OPENSHIFT_DIR) &&\
 		wget $(OPENSHIFT_URL) && \
 		chmod a+x $(OPENSHIFT) \
 		)
