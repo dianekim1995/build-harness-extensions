@@ -21,6 +21,10 @@ github/update-tag:
 	git tag -a unreleased-master -m 'unreleased-master' -f
 	git push --tag -f
 
+github/check-versions:
+	git --version
+	git --help
+
 ## Setup the webhook for the release-cutter bot
 github/webhook-setup:
 	$(call assert-set,GITHUB_TOKEN)
