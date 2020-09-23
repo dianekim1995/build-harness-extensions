@@ -23,7 +23,15 @@ github/update-tag:
 
 github/check-versions:
 	git --version
-	git --help
+
+github/clone:
+	$(call assert-set,GITHUB_TOKEN)
+	$(call assert-set,GITHUB_REPO)
+	$(call assert-set,GITHUB_REPO_BRANCH)
+	$(call assert-set,TARGET_OUTPUT_DIR)
+	git clone https://${GITHUB_TOKEN}@${GITHUB_REPO} --branch ${GITHUB_REPO_BRANCH} -- ${TARGET_OUTPUT_DIR}
+
+
 
 ## Setup the webhook for the release-cutter bot
 github/webhook-setup:
